@@ -1,0 +1,119 @@
+.services-section {
+  padding: 100px 5%;
+  background: #ffffff;
+}
+
+.services-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+.services-header h2 {
+  text-align: center;
+   color: black;
+}
+
+
+.badge {
+  color: #f97316;
+  font-weight: 900;
+  font-size: 18px;
+  letter-spacing: 1.5px;
+  margin-bottom: 5px;
+}
+
+.main-title {
+  font-size: 56px;
+  color: #001d3d;
+  font-weight: 900;
+}
+
+.services-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1400px;
+  margin: 0 auto;
+  gap: 30px;
+}
+
+.services-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.service-card {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  border: 1px solid #edf2f7;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+  transition: 0.3s ease;
+}
+
+.card-left { text-align: right; justify-content: flex-end; }
+.card-right { text-align: left; justify-content: flex-start; }
+
+/* --- THE FIX IS HERE --- */
+
+.icon-box {
+  width: 70px;  /* Fixed width */
+  height: 70px; /* Fixed height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 15px;
+  flex-shrink: 0; /* Prevents the box from squishing */
+}
+
+.standard-icon {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* This forces the implant icon to ignore its 
+   internal padding by scaling it UP 
+*/
+.special-implant-icon {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transform: scale(1.6); /* Increase this number until it looks right! */
+}
+
+/* ----------------------- */
+
+.text-content h3 {
+  font-size: 22px;
+  color: #001d3d;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.text-content p {
+  color: #64748b;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.services-center {
+  flex: 1.2;
+  display: flex;
+  justify-content: center;
+}
+
+.tooth-hero {
+  max-width: 100%;
+  height: auto;
+  filter: drop-shadow(0 20px 40px rgba(0,0,0,0.1));
+}
+
+@media (max-width: 1024px) {
+  .services-container { flex-direction: column; }
+  .card-left { flex-direction: row-reverse; text-align: left; }
+  .services-center { order: -1; margin-bottom: 40px; }
+}

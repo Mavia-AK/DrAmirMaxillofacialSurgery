@@ -1,0 +1,182 @@
+:root {
+  --primary: #f97316;
+  --primary-hover: #ea580c;
+
+  --bg-color: #f8fafc;
+  --card-bg: #ffffff;
+  --text-main: #0f172a;
+  --text-muted: #64748b;
+
+  --shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+}
+
+.premium-team-section {
+  padding: 80px 5%;
+  background-color: var(--bg-color);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.section-header h2 {
+  text-align: center;
+  color: #0f172a;
+}
+
+.subtitle {
+  color: var(--primary);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+
+.main-title {
+  font-size: 2.5rem;
+  color: var(--text-main);
+  margin: 10px 0;
+}
+
+.title-underline {
+  width: 50px;
+  height: 3px;
+  background: var(--primary);
+  margin: 0 auto;
+}
+
+/* Responsive Grid */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.premium-card {
+  background: var(--card-bg);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease;
+  border: 1px solid #eef2f6;
+}
+
+.premium-card:hover {
+  transform: translateY(-5px);
+}
+
+.card-image-wrapper {
+  position: relative;
+  height: 250px;
+  background: #f1f5f9;
+}
+
+.doctor-img {
+  width: 100%;
+  height: 100%;
+   /* Better for icon-style images */
+  padding: 1px;
+  /* This is the magic line: it crops the image to fill the 
+     space without stretching the doctor's face */
+  object-fit: cover; 
+  
+  /* This ensures the focus is on the top/center of the photo 
+     (usually where the face is) */
+  object-position: center top;
+}
+
+.role-badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: var(--primary);
+  color: white;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+
+.card-content {
+  padding: 24px;
+}
+
+.dept-tag {
+  color: var(--primary);
+  font-weight: 700;
+  font-size: 0.75rem;
+}
+
+.doctor-name {
+  font-size: 1.25rem;
+  margin: 8px 0;
+}
+
+.quals {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-bottom: 12px;
+}
+
+.bio {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.tag {
+  background: #eff6ff; /* Very light blue tint */
+  color: #f97316;      /* Stronger blue text for readability */
+  padding: 6px 12px;   /* More "button-like" padding */
+  border-radius: 8px;
+  font-size: 0.75rem;  /* Slightly larger for legibility */
+  font-weight: 600;
+  border: 1px solid #dbeafe; /* Light border makes it stand out on white backgrounds */
+  transition: all 0.2s ease;
+  display: inline-block; /* Ensures it stays visible */
+}
+
+.tag:hover {
+  background: #ea580c;
+  color: #ffffff;
+  transform: scale(1.05);
+}
+
+.contact-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.social-links a {
+  color: var(--text-muted);
+  margin-left: 12px;
+  transition: color 0.2s;
+}
+
+.social-links a:hover {
+  color: var(--primary);
+}
+
+/* Mobile Adjustments */
+@media (max-width: 480px) {
+  .main-title { font-size: 1.8rem; }
+  .premium-team-section { padding: 40px 15px; }
+}
+
+/* Container for the expertise labels */
+.expertise-container {
+  margin-top: 15px;
+  border-top: 1px dashed #e2e8f0; /* Adds a nice separator line */
+  padding-top: 15px;
+}
+
+
+
