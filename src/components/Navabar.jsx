@@ -15,10 +15,13 @@ export default function Navbar() {
   return (
     <nav className="navbar">
       <div className="nav-inner">
+        
         {/* Logo */}
         <h2 className="logo">
           <span className="logo-main">DR. AMIR</span>
-          <span className="logo-sub">Dental &amp; Maxillofacial Surgery</span>
+          <span className="logo-sub">
+            Dental &amp; Maxillofacial Surgery
+          </span>
         </h2>
 
         {/* Desktop Menu */}
@@ -30,13 +33,12 @@ export default function Navbar() {
           <li onClick={() => scrollTo("contact")}>Contact</li>
         </ul>
 
-        {/* Desktop Button */}
-        <button
-          className="btn"
-          onClick={() => scrollTo("appointment")}
-        >
-          Book Appointment
-        </button>
+        {/* Desktop Button Separate */}
+        <div className="desktop-btn">
+          <button onClick={() => scrollTo("appointment")}>
+            Book Appointment
+          </button>
+        </div>
 
         {/* Mobile Menu Icon */}
         <div
@@ -56,12 +58,12 @@ export default function Navbar() {
           <p onClick={() => scrollTo("team")}>Team</p>
           <p onClick={() => scrollTo("contact")}>Contact</p>
 
-          <button
-            className="btn"
-            onClick={() => scrollTo("appointment")}
-          >
-            Book Appointment
-          </button>
+          {/* Mobile Button Separate */}
+          <div className="mobile-btn">
+            <button onClick={() => scrollTo("appointment")}>
+              Book Appointment
+            </button>
+          </div>
         </div>
       )}
     </nav>
