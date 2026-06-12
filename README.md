@@ -159,6 +159,6 @@ This project is private and built for **Amir Dental Care**. All rights reserved.
 
 ## 👨‍💻 Author
 
-Built with ❤️ by **[Mavia Ahmad Khan](https://github.com/your-username)**
+Built with ❤️ by **[Mavia Ahmad Khan](https://github.com/Mavia-AK)**
 
 > Feel free to reach out if you have questions or want a similar project built!
