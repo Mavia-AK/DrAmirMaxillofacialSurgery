@@ -1,0 +1,250 @@
+/* =========================
+   FONT + GLOBAL RESET
+========================= */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: linear-gradient(135deg, #f8fafc, #ffffff);
+  color: #0f172a;
+  overflow-x: hidden;
+}
+
+/* =========================
+   ANIMATIONS
+========================= */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0px); }
+}
+
+/* =========================
+   CONTAINER
+========================= */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* =========================
+   GLASS EFFECT (CORE UI STYLE)
+========================= */
+.glass {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  border-radius: 20px;
+}
+
+/* =========================
+   SECTIONS
+========================= */
+section {
+  padding: 100px 0;
+  animation: fadeUp 0.8s ease;
+}
+
+/* =========================
+   TYPOGRAPHY
+========================= */
+h1, h2, h3 {
+  font-weight: 700;
+}
+
+p {
+  color: #64748b;
+}
+
+/* =========================
+   BUTTONS (PREMIUM STYLE)
+========================= */
+button {
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.btn {
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  color: white;
+  padding: 12px 22px;
+  border-radius: 12px;
+  font-weight: 600;
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.3);
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 25px rgba(37, 99, 235, 0.4);
+}
+
+.btn-outline {
+  border: 2px solid #2563eb;
+  color: #2563eb;
+  padding: 12px 22px;
+  border-radius: 12px;
+  background: transparent;
+}
+
+.btn-outline:hover {
+  background: #2563eb;
+  color: white;
+  transform: translateY(-3px);
+}
+
+/* =========================
+   NAVBAR GLASS
+========================= */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(255,255,255,0.6);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255,255,255,0.3);
+}
+
+.nav-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: 700;
+  color: #2563eb;
+}
+
+/* =========================
+   HERO
+========================= */
+.hero {
+  background: linear-gradient(135deg, #eff6ff, #ffffff);
+}
+
+.hero h1 {
+  font-size: 52px;
+  animation: fadeUp 1s ease;
+}
+
+.hero h1 span {
+  color: #2563eb;
+}
+
+.hero p {
+  margin: 15px 0;
+}
+
+/* floating effect */
+.hero-image img {
+  animation: float 4s ease-in-out infinite;
+  border-radius: 25px;
+}
+
+/* =========================
+   GLASS CARDS (SERVICES / TEAM)
+========================= */
+.card {
+  background: rgba(255,255,255,0.7);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.4);
+  border-radius: 18px;
+  padding: 25px;
+  transition: 0.4s;
+}
+
+.card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+}
+
+/* =========================
+   SERVICE GRID
+========================= */
+.services {
+  background: linear-gradient(135deg, #f8fafc, #ffffff);
+}
+
+/* =========================
+   TEAM AVATAR EFFECT
+========================= */
+.avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #dbeafe, #bfdbfe);
+  margin: auto;
+  animation: float 5s ease-in-out infinite;
+}
+
+/* =========================
+   CONTACT BOX
+========================= */
+.box {
+  background: rgba(255,255,255,0.7);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 20px;
+  transition: 0.3s;
+}
+
+.box:hover {
+  transform: translateY(-6px);
+}
+
+/* =========================
+   FOOTER GLASS DARK
+========================= */
+.footer {
+  background: #0f172a;
+  color: white;
+  padding: 70px 0;
+}
+
+/* =========================
+   SCROLL ANIMATION BASE
+========================= */
+.fade-in {
+  animation: fadeUp 0.8s ease forwards;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+  section {
+    padding: 70px 0;
+  }
+
+  .hero h1 {
+    font-size: 34px;
+    text-align: center;
+  }
+}
