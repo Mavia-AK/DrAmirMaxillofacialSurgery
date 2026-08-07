@@ -44,11 +44,13 @@ import About from "./components/About";
 import Services from "./components/Services";
 import Achievements from "./components/Achievements";
 import Team from "./components/Team";
-import Appointment from "./components/Appointment";
-import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import FloatingButtons from "./components/FloatingButtons";
-import "./Styles/bookingContactLayout.css";
+import BookingContact from "./components/BookingContact";
+import "./Styles/bookingContact.css";
+
+
+
 
 export default function App() {
   return (
@@ -64,10 +66,7 @@ export default function App() {
 
       <div className="appointment-contact-wrapper">
         <div className="left" id="appointment">
-          <Appointment />
-        </div>
-        <div className="right" id="contact">
-          <Contact />
+          <BookingContact />
         </div>
       </div>
 
