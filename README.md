@@ -54,15 +54,9 @@ amir-dental/
 │   │   ├── Services.jsx
 │   │   ├── Achievements.jsx
 │   │   ├── Team.jsx
-│   │   ├── Appointment.jsx
-│   │   ├── Contact.jsx
+│   │   ├── BookingContact.jsx
 │   │   ├── FloatingButtons.jsx
 │   │   └── Footer.jsx
-│   ├── data/             # Centralized content data
-│   │   ├── clinicInfo.js
-│   │   ├── services.js
-│   │   ├── team.js
-│   │   └── achievements.js
 │   ├── Styles/           # Per-component CSS files
 │   ├── utils/
 │   │   └── scrollToSection.js
