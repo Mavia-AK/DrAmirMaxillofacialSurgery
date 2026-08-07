@@ -169,7 +169,7 @@ export default function BookingContact() {
 
         {/* ================= RIGHT SIDE ================= */}
 
-        <div className="right-side">
+        <div id="contact" className="right-side">
 
           <div className="contact-header">
 
