@@ -1,0 +1,916 @@
+/* =====================================================
+   BOOKING CONTACT CSS
+   PART 1 - LAYOUT + APPOINTMENT
+===================================================== */
+
+/* =====================
+   RESET
+===================== */
+
+.booking-contact *,
+.booking-contact *::before,
+.booking-contact *::after {
+    box-sizing: border-box;
+}
+
+/* =====================
+   MAIN SECTION
+===================== */
+
+.booking-contact {
+    width: 100%;
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #f8fafc, #fff7ed);
+}
+
+/* =====================
+   WRAPPER
+===================== */
+
+.booking-contact .appointment-contact-wrapper {
+    display: grid;
+    grid-template-columns: 480px 1fr;
+
+    max-width: 1400px;
+    margin: 0 auto;
+
+    background: #ffffff;
+
+    border-radius: 40px;
+
+    overflow: hidden;
+
+    border: 1px solid rgba(0,0,0,0.03);
+
+    box-shadow: 0 40px 100px rgba(0,0,0,0.07);
+}
+
+/* =====================
+   LEFT SIDE
+===================== */
+
+.booking-contact .left-side{
+    background: linear-gradient(165deg,#f97316 0%,#ea580c 100%);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:40px;
+    position:relative;
+}
+
+.booking-contact .left-side::before{
+    content:"";
+    position:absolute;
+
+    width:300px;
+    height:300px;
+
+    top:-100px;
+    left:-100px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.08);
+}
+
+/* =====================
+   APPOINTMENT CARD
+===================== */
+
+.booking-contact .appointment-card{
+
+    width:100%;
+    max-width:460px;
+
+    background:rgba(255,255,255,.88);
+
+    backdrop-filter:blur(18px);
+    -webkit-backdrop-filter:blur(18px);
+
+    border-radius:28px;
+
+    padding:45px 38px;
+
+    border:1px solid rgba(255,255,255,.6);
+
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+    position:relative;
+
+    overflow:visible;
+
+}
+
+.booking-contact .appointment-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:-50%;
+    left:-50%;
+
+    width:200%;
+    height:200%;
+
+    background:radial-gradient(circle,
+        rgba(249,115,22,.08),
+        transparent 60%);
+
+}
+
+.booking-contact .appointment-card>*{
+
+    position:relative;
+    z-index:1;
+
+}
+
+/* =====================
+   TITLES
+===================== */
+
+.booking-contact .title{
+
+    font-size:2rem;
+    font-weight:800;
+    color:#0f172a;
+
+}
+
+.booking-contact .subtitle{
+
+    color:#64748b;
+    margin-bottom:25px;
+
+}
+
+/* =====================
+   FORM
+===================== */
+
+.booking-contact .form{
+    width:100%;
+}
+
+/* =====================
+   INPUTS
+===================== */
+
+.booking-contact input{
+
+    width:100%;
+
+    padding:16px 18px;
+
+    margin-bottom:18px;
+
+    border-radius:14px;
+
+    border:1.5px solid #e2e8f0;
+
+    background:#f8fafc;
+
+    font-size:.95rem;
+
+    transition:.25s ease;
+
+}
+
+.booking-contact input:focus{
+
+    outline:none;
+
+    border-color:#f97316;
+
+    background:#fff;
+
+    transform:translateY(-1px);
+
+    box-shadow:0 0 0 4px rgba(249,115,22,.15);
+
+}
+
+/* =====================
+   SERVICE BOX
+===================== */
+
+.booking-contact .service-box{
+
+    position:relative;
+
+    width:100%;
+
+    margin-bottom:18px;
+
+}
+
+.booking-contact .service-input{
+
+    width:100%;
+
+    padding:16px 18px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    cursor:pointer;
+
+    background:#f8fafc;
+
+    border:1.5px solid #e2e8f0;
+
+    border-radius:14px;
+
+    font-size:.95rem;
+
+    color:#0f172a;
+
+    transition:.25s ease;
+
+}
+
+.booking-contact .service-input:hover{
+
+    border-color:#fdba74;
+
+}
+
+/* =====================
+   DROPDOWN
+===================== */
+
+.booking-contact .service-panel{
+
+    position:absolute;
+
+    top:calc(100% + 8px);
+
+    left:0;
+
+    width:100%;
+
+    max-height:260px;
+
+    overflow-y:auto;
+
+    background:rgba(255,255,255,.98);
+
+    backdrop-filter:blur(18px);
+
+    border-radius:16px;
+
+    border:1px solid #e2e8f0;
+
+    padding:8px;
+
+    box-shadow:0 25px 60px rgba(0,0,0,.18);
+
+    z-index:999;
+
+    animation:fadeDrop .2s ease;
+
+}
+
+.booking-contact .service-panel::-webkit-scrollbar{
+
+    width:4px;
+
+}
+
+.booking-contact .service-panel::-webkit-scrollbar-thumb{
+
+    background:rgba(249,115,22,.6);
+
+    border-radius:20px;
+
+}
+
+.booking-contact .service-panel{
+
+    scrollbar-width:thin;
+    scrollbar-color:rgba(249,115,22,.6) transparent;
+
+}
+
+.booking-contact .service-item{
+
+    padding:12px 14px;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    color:#0f172a;
+
+    transition:.2s;
+
+}
+
+.booking-contact .service-item:hover{
+
+    background:#fff7ed;
+
+    color:#f97316;
+
+    transform:translateX(5px);
+
+}
+
+/* =====================
+   BUTTON
+===================== */
+
+.booking-contact button{
+
+    width:100%;
+
+    margin-top:10px;
+
+    padding:16px;
+
+    border:none;
+
+    border-radius:999px;
+
+    cursor:pointer;
+
+    color:#fff;
+
+    font-size:1rem;
+
+    font-weight:700;
+
+    background:linear-gradient(135deg,#f97316,#ea580c);
+
+    box-shadow:0 12px 25px rgba(249,115,22,.35);
+
+    transition:.3s;
+
+}
+
+.booking-contact button:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 18px 40px rgba(249,115,22,.45);
+
+}
+
+.booking-contact button:active{
+
+    transform:scale(.98);
+
+}
+
+/* =====================
+   ANIMATION
+===================== */
+
+@keyframes fadeDrop{
+
+    from{
+
+        opacity:0;
+        transform:translateY(-8px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+
+}
+/* =====================================================
+   BOOKING CONTACT CSS
+   PART 2 - CONTACT SECTION
+===================================================== */
+
+
+/* =====================
+   RIGHT SIDE
+===================== */
+
+.booking-contact .right-side{
+
+    background:#ffffff;
+
+    padding:60px;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+
+}
+
+
+/* =====================
+   CONTACT HEADER
+===================== */
+
+.booking-contact .contact-header{
+
+    width:100%;
+
+    margin-bottom:35px;
+
+}
+
+.booking-contact .contact-header h2{
+
+    font-size:3rem;
+
+    font-weight:700;
+
+    color:#0f172a;
+
+    line-height:1.1;
+
+    letter-spacing:-1.5px;
+
+    margin:0;
+
+    position:relative;
+
+    padding-top:18px;
+
+}
+
+.booking-contact .contact-header h2::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:55px;
+
+    height:5px;
+
+    border-radius:10px;
+
+    background:linear-gradient(135deg,#f97316,#ea580c);
+
+}
+
+.booking-contact .contact-header p{
+
+    margin-top:12px;
+
+    color:#64748b;
+
+    font-size:1rem;
+
+    line-height:1.7;
+
+}
+
+
+/* =====================
+   CONTACT GRID
+===================== */
+
+.booking-contact .contact-info-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:20px;
+
+    margin-bottom:35px;
+
+}
+
+
+/* =====================
+   CONTACT CARD
+===================== */
+
+.booking-contact .info-capsule{
+
+    background:rgba(255,247,237,.85);
+
+    backdrop-filter:blur(10px);
+    -webkit-backdrop-filter:blur(10px);
+
+    border:1px solid #fed7aa;
+
+    border-radius:18px;
+
+    padding:22px;
+
+    min-height:130px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    transition:.3s ease;
+
+}
+
+.booking-contact .info-capsule:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 18px 40px rgba(249,115,22,.12);
+
+}
+
+.booking-contact .info-capsule h4{
+
+    margin:0 0 10px;
+
+    color:#f97316;
+
+    font-size:.85rem;
+
+    text-transform:uppercase;
+
+    font-weight:700;
+
+    letter-spacing:.08em;
+
+}
+
+.booking-contact .info-capsule p{
+
+    margin:0;
+
+    color:#334155;
+
+    font-size:.95rem;
+
+    font-weight:600;
+
+    line-height:1.6;
+
+    word-break:break-word;
+
+}
+
+
+/* =====================
+   MAP
+===================== */
+
+.booking-contact .map-container{
+
+    width:100%;
+
+    height:450px;
+
+    overflow:hidden;
+
+    border-radius:28px;
+
+    background:#fff;
+
+    border:1px solid #e2e8f0;
+
+    box-shadow:0 20px 50px rgba(0,0,0,.08);
+
+}
+
+.booking-contact .map-container iframe{
+
+    width:100%;
+
+    height:100%;
+
+    border:0;
+
+    display:block;
+
+}
+
+
+/* =====================
+   OPTIONAL SPACING
+===================== */
+
+.booking-contact .contact-header,
+.booking-contact .contact-info-grid,
+.booking-contact .map-container{
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+
+/* =====================
+   NICE HOVER FEEL
+===================== */
+
+.booking-contact .map-container:hover{
+
+    box-shadow:0 25px 60px rgba(249,115,22,.12);
+
+    transition:.35s ease;
+
+}
+/* =====================================================
+   BOOKING CONTACT CSS
+   PART 3 - RESPONSIVE
+===================================================== */
+
+
+/* =========================
+   LARGE TABLETS
+========================= */
+
+@media (max-width:1200px){
+
+    .booking-contact .appointment-contact-wrapper{
+
+        grid-template-columns:420px 1fr;
+
+    }
+
+    .booking-contact .right-side{
+
+        padding:50px;
+
+    }
+
+}
+
+
+/* =========================
+   TABLETS
+========================= */
+
+@media (max-width:1024px){
+
+    .booking-contact{
+
+        padding:60px 20px;
+
+    }
+
+    .booking-contact .appointment-contact-wrapper{
+
+        grid-template-columns:1fr;
+
+        border-radius:30px;
+
+    }
+
+    .booking-contact .left-side{
+
+        min-height:260px;
+
+        padding:50px 30px;
+
+    }
+
+    .booking-contact .appointment-card{
+
+        max-width:500px;
+
+    }
+
+    .booking-contact .right-side{
+
+        padding:45px 30px;
+
+    }
+
+    .booking-contact .contact-header h2{
+
+        font-size:2.5rem;
+
+    }
+
+    .booking-contact .contact-info-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+    .booking-contact .info-capsule:nth-child(3){
+
+        grid-column:span 2;
+
+    }
+
+}
+
+
+/* =========================
+   SMALL TABLETS
+========================= */
+
+@media (max-width:768px){
+
+    .booking-contact{
+
+        padding:50px 15px;
+
+    }
+
+    .booking-contact .left-side{
+
+        padding:35px 20px;
+
+    }
+
+    .booking-contact .appointment-card{
+
+        padding:35px 25px;
+
+    }
+
+    .booking-contact .right-side{
+
+        padding:35px 20px;
+
+    }
+
+    .booking-contact .contact-header{
+
+        margin-bottom:25px;
+
+    }
+
+    .booking-contact .contact-header h2{
+
+        font-size:2.2rem;
+
+    }
+
+    .booking-contact .contact-info-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .booking-contact .info-capsule:nth-child(3){
+
+        grid-column:auto;
+
+    }
+
+    .booking-contact .map-container{
+
+        height:350px;
+
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width:480px){
+
+    .booking-contact{
+
+        padding:40px 12px;
+
+    }
+
+    .booking-contact .appointment-contact-wrapper{
+
+        border-radius:24px;
+
+    }
+
+    .booking-contact .left-side{
+
+        padding:25px 15px;
+
+        min-height:auto;
+
+    }
+
+    .booking-contact .appointment-card{
+
+        padding:28px 18px;
+
+        border-radius:22px;
+
+    }
+
+    .booking-contact .title{
+
+        font-size:1.6rem;
+
+    }
+
+    .booking-contact .subtitle{
+
+        font-size:.95rem;
+
+    }
+
+    .booking-contact input{
+
+        padding:15px;
+
+        font-size:.92rem;
+
+    }
+
+    .booking-contact .service-input{
+
+        padding:15px;
+
+        font-size:.92rem;
+
+    }
+
+    .booking-contact .service-item{
+
+        font-size:.92rem;
+
+    }
+
+    .booking-contact button{
+
+        padding:15px;
+
+        font-size:.95rem;
+
+    }
+
+    .booking-contact .right-side{
+
+        padding:30px 18px;
+
+    }
+
+    .booking-contact .contact-header h2{
+
+        font-size:2rem;
+
+    }
+
+    .booking-contact .contact-header p{
+
+        font-size:.95rem;
+
+    }
+
+    .booking-contact .info-capsule{
+
+        min-height:115px;
+
+        padding:18px;
+
+    }
+
+    .booking-contact .map-container{
+
+        height:280px;
+
+        border-radius:18px;
+
+    }
+
+}
+
+
+/* =========================
+   VERY SMALL DEVICES
+========================= */
+
+@media (max-width:360px){
+
+    .booking-contact .appointment-card{
+
+        padding:24px 16px;
+
+    }
+
+    .booking-contact .title{
+
+        font-size:1.45rem;
+
+    }
+
+    .booking-contact .contact-header h2{
+
+        font-size:1.8rem;
+
+    }
+
+}

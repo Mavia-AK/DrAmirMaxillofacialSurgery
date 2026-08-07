@@ -18,7 +18,7 @@ export default function Hero() {
 
       <div className="hero-inner">
         <div className="hero-text">
-          <span className="badge">Smart & Gentle Dental Care</span>
+          <span className="badge"> Dental & Maxillofacial Surgery</span>
           <h1 className="hero-title">
             Advanced Care for a <span className="highlight">Healthier Smile</span>
           </h1>
