@@ -146,6 +146,7 @@ export default function BookingContact() {
 
               <input
                 type="date"
+                placeholder="Select Date"
                 required
                 value={form.date}
                 onChange={(e) =>
