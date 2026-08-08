@@ -144,11 +144,28 @@ export default function BookingContact() {
                 )}
               </div>
 
-              <input
+              {/* <input
                 type="date"
                 placeholder="Select Date"
                 required
                 value={form.date}
+                onChange={(e) =>
+                  setForm({
+                    ...form,
+                    date: e.target.value,
+                  })
+                }
+              /> */}
+            <input
+                type="text"
+                placeholder="Select Date"
+                required
+                value={form.date}
+                onTouchStart={(e) => (e.target.type = "date")}
+                onFocus={(e) => (e.target.type = "date")}
+                onBlur={(e) => {
+                  if (!e.target.value) e.target.type = "text";
+                }}
                 onChange={(e) =>
                   setForm({
                     ...form,
