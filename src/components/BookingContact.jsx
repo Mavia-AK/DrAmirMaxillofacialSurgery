@@ -158,7 +158,7 @@ export default function BookingContact() {
               /> */}
             <input
                 type="text"
-                placeholder="Select Date"
+                placeholder="select appointment date"
                 required
                 value={form.date}
                 onTouchStart={(e) => (e.target.type = "date")}
